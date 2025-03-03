@@ -2,7 +2,7 @@ TODO
 
 -[x] MAke it deploy (vercel)
 -[x] scaffold basic ui wiht mock data
--[ ] tidy up build process
+-[x] tidy up build process
 -[ ] actually set up a database 
 -[ ] attach database to UI
 -[ ] add authentication (w/ clerk )
