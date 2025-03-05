@@ -14,7 +14,7 @@ export default async function HomePage() {
       <div className="flex flex-wrap gap-4 w-full items-center justify-around">
 
         {images.map((image, index) => (
-          <div key={image.id + index} className=" flex flex-col w-48">
+          <div key={image.id} className=" flex flex-col w-48">
             <img src={image.url} alt="image" className="my-auto" />
             <div >{image.name}</div>
           </div>))}

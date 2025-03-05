@@ -5,7 +5,7 @@ TODO
 -[x] tidy up build process
 -[x] actually set up a database 
 -[x] attach database to UI
--[ ] add authentication (w/ clerk )
+-[x] add authentication (w/ clerk )
 -[ ] Add image upload 
 -[ ] Error management (w/ Sentry)
 -[ ] Routing/image page (parallel route)
