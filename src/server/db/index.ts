@@ -1,6 +1,7 @@
 import { NodePgDatabase, drizzle } from "drizzle-orm/node-postgres";
 import pkg from "pg";
 const { Client } = pkg;
+import { sql } from "drizzle-orm";
 import * as schema from "./schema";
 
 export const client = new Client({
