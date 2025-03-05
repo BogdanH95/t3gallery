@@ -12,7 +12,7 @@ export default function TopNav() {
                 <a href="#" >
                     Gallery
                 </a>
-                <a href="#" >
+                <a href="/about" >
                     About
                 </a>
                 <div className="flex gap-3">
