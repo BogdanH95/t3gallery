@@ -7,6 +7,8 @@ TODO
 -[x] attach database to UI
 -[x] add authentication (w/ clerk )
 -[ ] Add image upload 
+-[ ] "taint" (server only)
+-[ ] Use Nex/Image component
 -[ ] Error management (w/ Sentry)
 -[ ] Routing/image page (parallel route)
 -[ ] Delete button (w/ Server Actions)
