@@ -15,7 +15,7 @@ export default function TopNav() {
                 <a href="#" >
                     About
                 </a>
-                <div>
+                <div className="flex gap-3">
                     <SignedOut>
                         <SignInButton />
                         <SignUpButton />
