@@ -1,18 +1,18 @@
-import { drizzle } from "drizzle-orm/postgres-js";
-import postgres from "postgres";
-
-import { env } from "~/env";
+import { NodePgDatabase, drizzle } from "drizzle-orm/node-postgres";
+import pkg from "pg";
+const { Client } = pkg;
 import * as schema from "./schema";
 
-/**
- * Cache the database connection in development. This avoids creating a new connection on every HMR
- * update.
- */
-const globalForDb = globalThis as unknown as {
-  conn: postgres.Sql | undefined;
-};
+export const client = new Client({
+  connectionString: "postgres://019562ab-0912-7e7e-83d3-87895d36be61:439c00ee-4891-402d-86eb-4dfb000026ba@eu-central-1.db.thenile.dev/home_postgres",
+});
 
-const conn = globalForDb.conn ?? postgres(env.DATABASE_URL);
-if (env.NODE_ENV !== "production") globalForDb.conn = conn;
+await client.connect();
 
-export const db = drizzle(conn, { schema });
+// check the connection
+const res = await client.query("SELECT $1::text as message", [
+  "Client connected to Nile",
+]);
+console.log(res.rows[0].message);
+
+export const db = drizzle(client, { schema, logger: true });
