@@ -9,16 +9,13 @@ export default function TopNav() {
                 </a>
             </div>
             <div className="flex justify-between gap-3">
-                <a href="#" >
-                    Gallery
-                </a>
+              
                 <a href="/about" >
                     About
                 </a>
                 <div className="flex gap-3">
                     <SignedOut>
                         <SignInButton />
-                        <SignUpButton />
                     </SignedOut>
                     <SignedIn>
                         <UserButton />
